@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notesFragment">
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.example.notesandroid.ui.fragments.NotesFragment"
+        android:label="NotesFragment" >
+        <action
+            android:id="@+id/action_notesFragment_to_upsertNotesFragment"
+            app:destination="@id/upsertNotesFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/notesFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/upsertNotesFragment"
+        android:name="com.example.notesandroid.ui.fragments.UpsertNotesFragment"
+        android:label="UpsertNotesFragment" >
+        <argument
+            android:name="note"
+            app:argType="com.example.notesandroid.models.Note"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>

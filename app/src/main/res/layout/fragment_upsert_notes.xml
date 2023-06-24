@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".UpsertNotesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:lineSpacingExtra="8dp"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/yellow"
+            android:textColorHint="@color/secondary_color"
+            android:textCursorDrawable="@drawable/custom_edittext_cursor"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:textColor="@color/secondary_color">
+
+            <TextView
+                android:id="@+id/tvDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="|"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tvCharsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|left"
+            android:hint="Start typing"
+            android:lineSpacingExtra="8dp"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/yellow"
+            android:textColorHint="@color/secondary_color"
+            android:textCursorDrawable="@drawable/custom_edittext_cursor"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</layout>
